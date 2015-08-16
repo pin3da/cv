@@ -1,0 +1,186 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Manuel Felipe}{Pineda Loaiza}
+\title{Curriculum Vitae}                                   % optional, remove / comment the line if not wanted
+\address{Calle 16 N 13~56}{Santa Rosa de Cabal}{Colombia}  % optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+57~(6)~3104120721}                         % optional, remove / comment the line if not wanted
+\phone[fixed]{+57~(6)~364~2900}                            % optional, remove / comment the line if not wanted
+% optional, remove / comment the line if not wanted
+\email{manuel.felipe.pineda@gmail.com}                     % optional, remove / comment the line if not wanted
+\homepage{github.com/pin3da}                               % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                        % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                              % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Education}
+\cventry{2010-Present}{BSc in Computer Science}{Universidad Tecnológia de Perera}{Risaralda - Colombia}{}{}  % arguments 3 to 6 can be left empty
+
+\subsection{Selected Coursework}
+\begin{itemize}
+    \item Computer Science:
+        \begin{itemize}
+            \item Databases · Data Structures and Algorithms · Numerical Analysis · Operating Systems · Formal grammars and languages · Compilers · Computer Architecture  · Distributed systems  · Client Server architecture · Artificial intelligence.
+        \end{itemize}
+
+    \item Mathematics:
+        \begin{itemize}
+            \item Multivariable Calculus · Linear Algebra · Discrete Math · Physics · Statistics · Operations Research
+        \end{itemize}
+\end{itemize}
+
+%\section{Master thesis}
+%\cvitem{title}{\emph{Title}}
+%\cvitem{supervisors}{Supervisors}
+%\cvitem{description}{Short thesis abstract}
+
+
+
+\section{Experience}
+\subsection{Vocational}
+\cventry{2014--Present}{Web developer}{Soluintech}{Risaralda - Colombia}{}{Developer of backend services for SMaps using nodejs and ZeroMQ.
+\\ Developer of frontend services for SMaps using Openlayers 3 and javascript.}
+\cventry{2013--2014}{Web developer}{Universidad Tecnológica de Pereira}{Risaralda - Colombia}{}{Developer of UTP online judge.}
+\cventry{2011--2014}{Tutor}{Universidad Tecnológica de Pereira}{Risaralda - Colombia}{}{Data structures tutor.}
+\cventry{2010--2011}{Tutor}{Universidad Tecnológica de Pereira}{Risaralda - Colombia}{}{Mathematics tutor.}%
+
+
+
+%\subsection{Miscellaneous}
+%\cventry{year--year}{Job title}{Employer}{City}{}{Description}
+
+\section{Languages}
+\cvitemwithcomment{Spanish}{Native}{}
+\cvitemwithcomment{English}{B Independent User}{}
+\cvitemwithcomment{French}{A1 }{}
+
+\section{Computer skills}
+\cvdoubleitem{1}{C/C++ Programming}{4}{Proficient with Git}
+\cvdoubleitem{2}{Experience in web development with nodejs}{5}{Basic skills in HTML and CSS.}
+\cvdoubleitem{3}{Proficient with GNU/Linux} {6}{Familiar with non-sql databases}
+
+\section{Interests - Hobbies}
+\cvitem{Competitive Programming}{Several years (2011 - present) training in algorithms and math for ACM-ICPC competitions.}
+
+\section{Achievements}
+
+\cvlistitem{The 2014 World Finals, ACM - ICPC, Honorable mention, Universidad Tecnologica de Pereira}
+\cvlistitem{Second UNAH Programming Cup, Universidad Agraria de la Habana, Second place, 2014}
+\cvlistitem{The 2013 South America-North Regional Contest, ACM - ICPC, Second place, 2013 (0x7DD team)}
+\cvlistitem{Fourth Internal Programming Contest, Universidad Tecnológica de Pereira, First place, 2013}
+
+\section{Complementary studies}
+
+\cvlistitem{Training Camp Argentina, sixth edition, Universidad Nacional del Sur, Bahía Blanca, Argentina, July, 2015}
+\cvlistitem{Super and Distributed Computing Summer Camp, BIOS Centro de Bioinformática Y Biología Computacional, Manizales, Colombia, August 10-16, 2014}
+\cvlistitem{V Campamento Caribeño ACM-ICPC, Universidad de Ciencias Informaticas, La Habana, Cuba, May, 2014}
+
+\section{Personal Projects}
+
+
+\cvlistitem{Co-organizer of \href{http://pereirajs.org}{PereiraJS}  , javascript community in Pereira.}
+\cvlistitem{\href{https://github.com/in-silico/utpjudge}{UTPJudge}, ACM-ICPC-based judge for programming assignments and local training at Universidad tecnológica de Pereira}
+\cvlistitem{Peer-to-peer file sharing project based on bittorrent, using C++ and ZeroMQ. \href{https://github.com/pin3da/totient}{Gtihub repo}}
+\cvlistitem{All my open source projects can be found at my \href{https://github.com/pin3da/}{Github profile}}
+
+
+\section{References}
+\begin{cvcolumns}
+  \cvcolumn{Contacts}{
+    \begin{itemize}
+       \item Santiago Gutierrez, software engineer at Google. Email: santjuan@google.com
+       \item Sebastián Gómez, M.Sc. Professor of Universidad Tecnológica de Pereira. Email: sebasutp@gmail.com
+       \item John Osorio, Ing. Professor of Universidad Tecnológica de Pereira. Email: john@sirius.utp.edu.co
+    \end{itemize}
+}
+
+\end{cvcolumns}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\clearpage
+%-----       letter       ---------------------------------------------------------
+
+\iffalse
+
+
+% recipient data
+\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+\date{January 01, 1984}
+\opening{Dear Sir or Madam,}
+\closing{Yours faithfully,}
+\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+
+Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+
+Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+
+Albert Einstein discovered that $e=mc^2$ in 1905.
+
+\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
+
+\makeletterclosing
+
+\fi
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.
