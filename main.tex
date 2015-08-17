@@ -9,14 +9,16 @@
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
-\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+% \nopagenumbers{}                                 % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % character encoding
-\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage[utf8]{inputenc}                        % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+\usepackage[bottom,norule]{footmisc}               % enabling footnotes.
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
@@ -25,7 +27,7 @@
 
 % personal data
 \name{Manuel Felipe}{Pineda Loaiza}
-\title{Curriculum Vitae}                                   % optional, remove / comment the line if not wanted
+\title{CV}                                   % optional, remove / comment the line if not wanted
 \address{Calle 16 N 13~56}{Santa Rosa de Cabal}{Colombia}  % optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \phone[mobile]{+57~(6)~3104120721}                         % optional, remove / comment the line if not wanted
 \phone[fixed]{+57~(6)~364~2900}                            % optional, remove / comment the line if not wanted
@@ -35,6 +37,7 @@
 %\extrainfo{additional information}                        % optional, remove / comment the line if not wanted
 %\photo[64pt][0.4pt]{picture}                              % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 
+\newcommand{\urlfootnote}[1]{\footnote{\href{#1}{#1}}}
 
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
 %\makeatletter
@@ -54,19 +57,21 @@
 \makecvtitle
 
 \section{Education}
-\cventry{2010-Present}{BSc in Computer Science}{Universidad Tecnológia de Perera}{Risaralda - Colombia}{}{}  % arguments 3 to 6 can be left empty
-
+\cventry{2010-Present}{BSc in Computer Science}{Universidad Tecnológia de Pereira}{Risaralda - Colombia}{}{}  % arguments 3 to 6 can be left empty
+\textit{GPA: 4.5 / 5}
 \subsection{Selected Coursework}
 \begin{itemize}
-    \item Computer Science:
-        \begin{itemize}
-            \item Databases · Data Structures and Algorithms · Numerical Analysis · Operating Systems · Formal grammars and languages · Compilers · Computer Architecture  · Distributed systems  · Client Server architecture · Artificial intelligence.
-        \end{itemize}
+  \item \textbf{Computer Science:}
+    \begin{small}
+      Databases · Data Structures and Algorithms · Numerical Analysis · Operating Systems ·
+      Formal grammars and languages · Compilers · Computer Architecture  · Distributed systems ·
+      Client Server architecture · Artificial intelligence.
+    \end{small}
 
-    \item Mathematics:
-        \begin{itemize}
-            \item Multivariable Calculus · Linear Algebra · Discrete Math · Physics · Statistics · Operations Research
-        \end{itemize}
+    \item \textbf{Mathematics:}
+    \begin{small}
+      Multivariable Calculus · Linear Algebra · Discrete Math · Physics · Statistics · Operations Research
+    \end{small}
 \end{itemize}
 
 %\section{Master thesis}
@@ -78,50 +83,50 @@
 
 \section{Experience}
 \subsection{Vocational}
-\cventry{2014--Present}{Web developer}{Soluintech}{Risaralda - Colombia}{}{Developer of backend services for SMaps using nodejs and ZeroMQ.
-\\ Developer of frontend services for SMaps using Openlayers 3 and javascript.}
+\cventry{2014--Present}{Web developer}{Soluintech}{Risaralda - Colombia}{}{Developer of backend services for SMaps \footnotemark[1] using \textbf{nodejs and ZeroMQ.}
+\\ Developer of frontend services for SMaps using \textbf{Openlayers 3 and javascript.} }
 \cventry{2013--2014}{Web developer}{Universidad Tecnológica de Pereira}{Risaralda - Colombia}{}{Developer of UTP online judge.}
 \cventry{2011--2014}{Tutor}{Universidad Tecnológica de Pereira}{Risaralda - Colombia}{}{Data structures tutor.}
 \cventry{2010--2011}{Tutor}{Universidad Tecnológica de Pereira}{Risaralda - Colombia}{}{Mathematics tutor.}%
 
-
-
-%\subsection{Miscellaneous}
-%\cventry{year--year}{Job title}{Employer}{City}{}{Description}
-
-\section{Languages}
-\cvitemwithcomment{Spanish}{Native}{}
-\cvitemwithcomment{English}{B Independent User}{}
-\cvitemwithcomment{French}{A1 }{}
-
-\section{Computer skills}
-\cvdoubleitem{1}{C/C++ Programming}{4}{Proficient with Git}
-\cvdoubleitem{2}{Experience in web development with nodejs}{5}{Basic skills in HTML and CSS.}
-\cvdoubleitem{3}{Proficient with GNU/Linux} {6}{Familiar with non-sql databases}
-
-\section{Interests - Hobbies}
-\cvitem{Competitive Programming}{Several years (2011 - present) training in algorithms and math for ACM-ICPC competitions.}
+\footnotemark[1]{\href{http://maps.utp.edu.co/}{http://maps.utp.edu.co/}}
 
 \section{Achievements}
 
-\cvlistitem{The 2014 World Finals, ACM - ICPC, Honorable mention, Universidad Tecnologica de Pereira}
-\cvlistitem{Second UNAH Programming Cup, Universidad Agraria de la Habana, Second place, 2014}
-\cvlistitem{The 2013 South America-North Regional Contest, ACM - ICPC, Second place, 2013 (0x7DD team)}
-\cvlistitem{Fourth Internal Programming Contest, Universidad Tecnológica de Pereira, First place, 2013}
+\cvlistitem{Honorable mention. \textbf{ACM - ICPC World Finals}. Yekaterinburg, Russia. 2014}
+\cvlistitem{Second place. Second UNAH Programming Cup. La Habana, Cuba. 2014}
+\cvlistitem{Second place. ACM ICPC South America-North Regional Contest. Bogotá, Colombia. 2013}
+\cvlistitem{First place. Fourth Internal Programming Contest. Universidad Tecnológica de Pereira, Colombia. 2013}
 
 \section{Complementary studies}
 
 \cvlistitem{Training Camp Argentina, sixth edition, Universidad Nacional del Sur, Bahía Blanca, Argentina, July, 2015}
-\cvlistitem{Super and Distributed Computing Summer Camp, BIOS Centro de Bioinformática Y Biología Computacional, Manizales, Colombia, August 10-16, 2014}
-\cvlistitem{V Campamento Caribeño ACM-ICPC, Universidad de Ciencias Informaticas, La Habana, Cuba, May, 2014}
+\cvlistitem{Super and Distributed Computing Summer Camp, BIOS Centro de Bioinformática Y Biología Computacional, Manizales, Colombia, August, 2014}
+\cvlistitem{V Caribbean Programming Contest Training Camp, Universidad de Ciencias Informáticas, La Habana, Cuba, May, 2014}
 
 \section{Personal Projects}
 
+\begin{itemize}
+  \item Co-organizer of PereiraJS, javascript community in Pereira. \urlfootnote{http://pereirajs.org}
+  \item Developer of UTPJudge, ACM-ICPC-based judge for programming assignments and local training at Universidad Tecnológica de Pereira. \urlfootnote{https://github.com/in-silico/utpjudge}
+  \item Peer-to-peer file sharing project based on bittorrent, using C++ and ZeroMQ. \urlfootnote{https://github.com/pin3da/totient}
+  \item All my open source projects can be found at my GitHub profile. \urlfootnote{https://github.com/pin3da/}
+\end{itemize}
 
-\cvlistitem{Co-organizer of \href{http://pereirajs.org}{PereiraJS}  , javascript community in Pereira.}
-\cvlistitem{\href{https://github.com/in-silico/utpjudge}{UTPJudge}, ACM-ICPC-based judge for programming assignments and local training at Universidad tecnológica de Pereira}
-\cvlistitem{Peer-to-peer file sharing project based on bittorrent, using C++ and ZeroMQ. \href{https://github.com/pin3da/totient}{Gtihub repo}}
-\cvlistitem{All my open source projects can be found at my \href{https://github.com/pin3da/}{Github profile}}
+
+\section{Interests - Hobbies}
+\cvitem{Competitive Programming}{Five years (2011 - present) training in algorithms and math for ACM-ICPC competitions.}
+
+\section{Languages}
+\cvitemwithcomment{Spanish}{Native}{}
+\cvitemwithcomment{English}{Good}{}
+\cvitemwithcomment{French}{Basic}{}
+
+\section{Computer skills}
+\cvdoubleitem{1}{C/C++ Programming (preferred languaje)}{4}{Proficient with Git}
+\cvdoubleitem{2}{Experience in web development with nodejs and javascript}{5}{Basic skills in HTML and CSS.}
+\cvdoubleitem{3}{Proficient with GNU/Linux} {6}{Familiar with non-sql databases}
+
 
 
 \section{References}
@@ -129,7 +134,7 @@
   \cvcolumn{Contacts}{
     \begin{itemize}
        \item Santiago Gutierrez, software engineer at Google. Email: santjuan@google.com
-       \item Sebastián Gómez, M.Sc. Professor of Universidad Tecnológica de Pereira. Email: sebasutp@gmail.com
+       \item Sebastián Gómez González, MSc. Professor of Universidad Tecnológica de Pereira. Email: sebasutp@gmail.com
        \item John Osorio, Ing. Professor of Universidad Tecnológica de Pereira. Email: john@sirius.utp.edu.co
     \end{itemize}
 }
