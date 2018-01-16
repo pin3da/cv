@@ -26,11 +26,11 @@
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
-\name{Manuel Felipe}{Pineda Loaiza}
-\title{CV}                                   % optional, remove / comment the line if not wanted
-\address{Calle 16 N 13~56}{Santa Rosa de Cabal}{Colombia}  % optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\name{Manuel Felipe Pineda Loaiza}{}
+% \title{CV}                                   % optional, remove / comment the line if not wanted
+\address{Calle 14 N 7b~45}{Santa Rosa de Cabal}{Colombia}  % optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \phone[mobile]{+57~3104120721}                         % optional, remove / comment the line if not wanted
-\phone[fixed]{+57~(6)~364~2900}                            % optional, remove / comment the line if not wanted
+% \phone[fixed]{+57~(6)~364~2900}                            % optional, remove / comment the line if not wanted
 % optional, remove / comment the line if not wanted
 \email{manuel.felipe.pineda@gmail.com}                     % optional, remove / comment the line if not wanted
 \homepage{pin3da.github.io}                               % optional, remove / comment the line if not wanted
@@ -56,43 +56,41 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
+\section{Experience}
+  \cventry{2017}{Software developer}{DomainsBot Inc}{Remote Work}{}{
+    - Developer of a distributed system to discover DNS avaiavility using \textbf{Python and AWS.} \\
+    - Developer of a ETL service that daily downloads files from heterogeneous sources using \textbf{Airflow} and AWS. \\
+    - Developer of internal services using Python and AWS. \\
+    Used tecnologies among the projects: \textbf{graphite/statsd} for monitoring, \textbf{logentries} for log analytics, and \textbf{ansible} for deploys.
+  }
+  \cventry{2014--2016}{Software developer}{Sirius Research Group}{Risaralda - Colombia}{}{
+    - Developer of a map based platform that provides and consumes several geolocation services for Risaralda, Colombia.
+    Involved in the project since the desing of the architecture.\\
+    Used \textbf{nodejs and ZeroMQ} for the backend and \textbf{openlayers3 and javascript} for the frontend.
+  }
+  \cventry{2013--2014}{Web developer}{Universidad Tecnológica de Pereira}{Risaralda - Colombia}{}{
+    -Developer of an ACM-ICPC-based online judge for local training at Universidad Tecnológica de Pereira.
+  }
+
 \section{Education}
 \cventry{2016-present}{Electrical Engineering MSc.}{Universidad Tecnológia de Pereira}{Risaralda - Colombia}{}{Expected graduation: December 2018}  % arguments 3 to 6 can be left empty
 
-\cventry{2010-2016}{BSc in Computer Science}{Universidad Tecnológia de Pereira}{Risaralda - Colombia}{\textit{GPA: 4.3 / 5}}{March 2016}  % arguments 3 to 6 can be left empty
+\cventry{2010-2016}{BSc in Computer Science}{Universidad Tecnológia de Pereira}{Risaralda - Colombia}{\textit{distinguished student with GPA: 4.3 / 5}}{March 2016}  % arguments 3 to 6 can be left empty
 
-%\subsection{Selected Coursework}
-%\begin{itemize}
-  %\item \textbf{Computer Science:}
-    %\begin{small}
-      %Databases · Data Structures and Algorithms · Numerical Analysis · Operating Systems ·
-      %Formal grammars and languages · Compilers · Computer Architecture  · Distributed systems ·
-      %Client Server architecture · Artificial intelligence.
-    %\end{small}
+\subsection{Complementary studies}
 
-    %\item \textbf{Mathematics:}
-    %\begin{small}
-      %Multivariable Calculus · Linear Algebra · Discrete Math · Physics · Statistics · Operations Research
-    %\end{small}
-%\end{itemize}
+\cvlistitem{Programming Contest Training Camp Argentina, seventh edition, Universidad Nacional del Comahue, Neuquén, Argentina, July, 2016}
+\cvlistitem{Programming Contest Training Camp Argentina, sixth edition, Universidad Nacional del Sur, Bahía Blanca, Argentina, July, 2015}
+\cvlistitem{Super and Distributed Computing Summer Camp, BIOS Centro de Bioinformática Y Biología Computacional, Manizales, Colombia, August, 2014}
+\cvlistitem{V Caribbean Programming Contest Training Camp, Universidad de Ciencias Informáticas, La Habana, Cuba, May, 2014}
 
-%\section{Master thesis}
-%\cvitem{title}{\emph{Title}}
-%\cvitem{supervisors}{Supervisors}
-%\cvitem{description}{Short thesis abstract}
-
-
-
-\section{Experience}
-\subsection{Vocational}
-  \cventry{2017--Present}{Software developer}{DomainsBot Inc}{Remote Work}{}{Developer of internal services in Python and Amazon Web Services}
-  \cventry{2014--2016}{Web developer}{Sirius Research Group}{Risaralda - Colombia}{}{ Map based platform that provides and consumes several geolocation services for Risaralda, Colombia. Using \textbf{nodejs and ZeroMQ} for backend and \textbf{openlayers3 and javascript} for frontend.}
-  \cventry{2013--2014}{Web developer}{Universidad Tecnológica de Pereira}{Risaralda - Colombia}{}{ACM-ICPC-based online judge for local training at Universidad Tecnológica de Pereira.}
 \section{Achievements}
 
+\cvlistitem{Second place. ACM ICPC South America-North Regional Contest. Bogotá, Colombia. 2017}
+% \cvlistitem{Third place. XXXI Maraton Nacional de Programacion ACIS REDIS, Colombia. 2017}
 \cvlistitem{Best ranked colombian at the \textbf{Distributed Google Code Jam 2017}. \footnotemark[2]}
 \cvlistitem{Best ranked colombian at the \textbf{Google Code Jam 2016}. \footnotemark[1]}
-\cvlistitem{Third place. XXIX Maraton Nacional de Programacion ACIS REDIS, Colombia. 2015}
+% \cvlistitem{Third place. XXIX Maraton Nacional de Programacion ACIS REDIS, Colombia. 2015}
 \cvlistitem{Honorable mention. \textbf{ACM - ICPC World Finals}. Yekaterinburg, Russia. 2014}
 \cvlistitem{Second place. Second UNAH Programming Cup. La Habana, Cuba. 2014}
 \cvlistitem{Second place. ACM ICPC South America-North Regional Contest. Bogotá, Colombia. 2013}
@@ -100,17 +98,11 @@
 
 \footnotemark[1]{\href{https://www.go-hero.net/jam/16/regions/Colombia}{https://www.go-hero.net/jam/16/regions/Colombia}}
 \\\footnotemark[2]{\href{https://code.google.com/codejam/contest/3284486/scoreboard\#sp=301}{https://code.google.com/codejam/contest/3284486/scoreboard\#sp=301, handle: ManuelPineda}}
-\section{Complementary studies}
-
-\cvlistitem{Programming Contest Training Camp Argentina, seventh edition, Universidad Nacional del Comahue, Neuquén, Argentina, July, 2016}
-\cvlistitem{Programming Contest Training Camp Argentina, sixth edition, Universidad Nacional del Sur, Bahía Blanca, Argentina, July, 2015}
-\cvlistitem{Super and Distributed Computing Summer Camp, BIOS Centro de Bioinformática Y Biología Computacional, Manizales, Colombia, August, 2014}
-\cvlistitem{V Caribbean Programming Contest Training Camp, Universidad de Ciencias Informáticas, La Habana, Cuba, May, 2014}
 
 \section{Personal Projects}
 
 \begin{itemize}
-  \item Co-organizer of PereiraJS, javascript community in Pereira. \urlfootnote{http://pereirajs.org}
+  \item Co-organizer of PereiraJS and Pereira Tech talks, local communities about programming in Pereira, Risaralda. \urlfootnote{http://pereirajs.org, https://blog.pereiratechtalks.com/}
   \item Peer-to-peer file sharing project based on bittorrent, using C++ and ZeroMQ. \urlfootnote{https://github.com/pin3da/totient}
   \item GPLib, Gaussian Processes library, using C++ and Armadillo. \urlfootnote{https://github.com/pin3da/gplib}
   \item All my open source projects can be found at my GitHub profile. \urlfootnote{https://github.com/pin3da/}
@@ -118,7 +110,7 @@
 
 
 \section{Interests - Hobbies}
-\cvitem{Competitive Programming}{Six years (2011 - present) training in algorithms and math for ACM-ICPC competitions.}
+\cvitem{Competitive Programming}{Training in algorithms and math for programming competitions since 2011.}
 
 \section{Languages}
 \cvdoubleitem{Spanish}{Native}{English}{Good}
