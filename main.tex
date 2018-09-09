@@ -25,6 +25,23 @@
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
+%===============Variables
+\def \constzeroindent {0cm}
+\def \constfirstindent {0.2cm}
+\def \constsecondindent {0.5cm}
+ 
+%===============Macros
+\newenvironment{mycustomindent}[1]
+{\setlength{\parindent}{#1}}
+{\setlength{\parindent}{\constzeroindent}}
+ 
+\newcommand{\indentedpar}[1]{
+\begin{mycustomindent}{\constsecondindent}
+\begin{tabular}{@{}p{15cm}@{}}
+#1 \\
+\end{tabular}
+\end{mycustomindent}}
+
 
 % personal data
 \name{Manuel Felipe Pineda Loaiza}{}
@@ -58,19 +75,25 @@
 \makecvtitle
 
 \section{Work Experience}
-  \cventry{01/2017--12/2017}{Software developer}{DomainsBot Inc}{Remote Work}{}{
-    - Developed a distributed system to improve the accuracy of the domain names availability using \textbf{Python and AWS.} \\
-    - Developed an ETL service that daily downloads more than 1200 files from heterogeneous sources and saves them in a single format using \textbf{Airflow} and AWS. \\
-    Used technologies among the projects: \textbf{graphite/statsd} for monitoring, \textbf{logentries} for log analytics, and \textbf{ansible} for deploys.
+  \cventry{01/2017--12/2017}{Software developer}{DomainsBot Inc}{}{Remote}{
+    \indentedpar{
+      - Developed a distributed system to improve the accuracy of the domain names availability using \textbf{Python, DynamoDB, SQS/SNS} \\
+      - Developed an ETL service that daily downloads more than 1200 files from heterogeneous sources and saves them in a single format using \textbf{Airflow}. \\
+      \textbf{Tech Stack:} AWS/EC2, graphite/statsd, logentries, ansible.
+    }
   }
-  \cventry{03/2014--11/2016}{Software developer}{Sirius Research Group}{Risaralda - Colombia}{}{
-    - Built a map based platform that provides and consumes several geolocation services for Risaralda, Colombia. The project integrates several services of the
-    research group such video streaming from the streets and car counting.
-    Involved in the project since the design of the architecture.\\
-    Used \textbf{nodejs and ZeroMQ} for the backend and \textbf{openlayers3} and \textbf{Javascript} for the frontend.
+  \cventry{03/2014--11/2016}{Software developer}{Sirius Research Group}{}{Risaralda - Colombia}{
+    \indentedpar{
+      - Built a map based platform that provides and consumes several geolocation services for Risaralda, Colombia. The project integrates several services of the
+      research group such video streaming from the streets and car counting.
+      Involved in the project since the design of the architecture.\\
+      \textbf{Tech Stack:} NodeJs and ZeroMQ for the backend and openlayers3 and Javascript for the frontend.
+    }
   }
-  \cventry{01/2013--12/2013}{Web developer}{Universidad Tecnológica de Pereira}{Risaralda - Colombia}{}{
-    -Built an ACM-ICPC-based online judge for local training at my University.
+  \cventry{01/2013--12/2013}{Web developer}{Universidad Tecnológica de Pereira}{}{Risaralda - Colombia}{
+    \indentedpar{
+      -Built an ACM-ICPC-based online judge for local training at my University.
+    }
   }
 
   \section{Personal Projects}
@@ -78,7 +101,7 @@
   \begin{itemize}
     \item Co-organizer of PereiraJS and PereiraTechTalks, local communities about programming in Pereira. % \urlfootnote{http://pereirajs.org, https://blog.pereiratechtalks.com/}
     \item Peer-to-peer file sharing project based on bittorrent, using \textbf{C++} and \textbf{ZeroMQ}. % \urlfootnote{https://github.com/pin3da/totient}
-    \item GPLib, Gaussian Processes library, using C++ and \textbf{Armadillo}. % \urlfootnote{https://github.com/pin3da/gplib}
+    \item GPLib, Gaussian Processes library, using \textbf{C++} and \textbf{Armadillo}. % \urlfootnote{https://github.com/pin3da/gplib}
     % \item All my open source projects can be found at my GitHub profile : \textbf{https://github.com/pin3da/}
   \end{itemize}
 
@@ -102,7 +125,7 @@
 % \cventry{2010-2016}{BSc in Computer Science}{Universidad Tecnológia de Pereira}{Risaralda - Colombia}{\textit{distinguished student with GPA: 4.3 / 5}}{}  % arguments 3 to 6 can be left empty
 % \subsection{Complementary studies}
 \begin{itemize}
-  \item{BSc in Systems and Computer Engineering, Universidad Tecnológia de Pereira. \\ graduation time: March, 2016. \textit{distinguished student with GPA: 4.3/5}}
+  \item{BSc in Systems and Computer Engineering, Universidad Tecnológia de Pereira. \\ (2010-2016). \textit{distinguished student, 4.3/5 GPA}}
   \item{Programming Contest Training Camp, Neuquén, Argentina, July, 2016}
   \item{Programming Contest Training Camp, Bahía Blanca, Argentina, July, 2015}
   \item{Super and Distributed Computing Summer Camp,  Manizales, Colombia, August, 2014}
