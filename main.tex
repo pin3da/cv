@@ -29,12 +29,12 @@
 \def \constzeroindent {0cm}
 \def \constfirstindent {0.2cm}
 \def \constsecondindent {0.5cm}
- 
+
 %===============Macros
 \newenvironment{mycustomindent}[1]
 {\setlength{\parindent}{#1}}
 {\setlength{\parindent}{\constzeroindent}}
- 
+
 \newcommand{\indentedpar}[1]{
 \begin{mycustomindent}{\constsecondindent}
 \begin{tabular}{@{}p{15cm}@{}}
@@ -75,24 +75,25 @@
 \makecvtitle
 
 \section{Work Experience}
-  \cventry{01/2017--12/2017}{Software developer}{DomainsBot Inc}{}{Remote}{
+  \cventry{01/2019--Actual}{Software engineer}{Google}{}{}{
+    \indentedpar{
+      - Build and mantain infrastructure for storage in the Counter Abuse Team.
+    }
+  }
+
+  \cventry{01/2017--12/2017}{Software engineer}{DomainsBot Inc}{}{Remote}{
     \indentedpar{
       - Developed a distributed system to improve the accuracy of the domain names availability using \textbf{Python, DynamoDB, SQS/SNS} \\
       - Developed an ETL service that daily downloads more than 1200 files from heterogeneous sources and saves them in a single format using \textbf{Airflow}. \\
       \textbf{Tech Stack:} AWS/EC2, graphite/statsd, logentries, ansible.
     }
   }
-  \cventry{03/2014--11/2016}{Software developer}{Sirius Research Group}{}{Risaralda - Colombia}{
+  \cventry{03/2014--11/2016}{Software engineer}{Sirius Research Group}{}{Risaralda - Colombia}{
     \indentedpar{
       - Built a map based platform that provides and consumes several geolocation services for Risaralda, Colombia. The project integrates several services of the
       research group such video streaming from the streets and car counting.
       Involved in the project since the design of the architecture.\\
       \textbf{Tech Stack:} NodeJs and ZeroMQ for the backend and openlayers3 and Javascript for the frontend.
-    }
-  }
-  \cventry{01/2013--12/2013}{Web developer}{Universidad Tecnológica de Pereira}{}{Risaralda - Colombia}{
-    \indentedpar{
-      -Built an ACM-ICPC-based online judge for local training at my University.
     }
   }
 
